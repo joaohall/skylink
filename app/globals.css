@@ -31,3 +31,8 @@ body {
     text-wrap: balance;
   }
 }
+
+.deepglow-text{
+  text-shadow: rgba(118,13,255,1) 0px 0px 60px;
+
+}
