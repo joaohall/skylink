@@ -36,3 +36,8 @@ body {
   text-shadow: rgba(118,13,255,1) 0px 0px 60px;
 
 }
+
+.deepglow-box{
+  box-shadow: rgba(118,13,255,0.3) 0px 0px 120px;
+
+}
