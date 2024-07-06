@@ -9,11 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial-t': 'radial-gradient(circle at 50% -250%, var(--tw-gradient-stops))',
-        'gradient-radial-t-custom': 'radial-gradient(circle at 50% 20%, var(--tw-gradient-stops))',
+        "gradient-radial-t":
+          "radial-gradient(circle at 50% -250%, var(--tw-gradient-stops))",
+        "gradient-radial-t-custom":
+          "radial-gradient(circle at 50% 20%, var(--tw-gradient-stops))",
 
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      backgroundSize: {
+        "size-200": "200% 200%",
+      },
+      backgroundPosition: {
+        "pos-0": "0% 0%",
+        "pos-100": "100% 100%",
       },
     },
   },

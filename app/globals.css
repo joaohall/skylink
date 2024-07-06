@@ -41,3 +41,22 @@ body {
   box-shadow: rgba(118,13,255,0.3) 0px 0px 120px;
 
 }
+.earth-gradient{
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%);
+
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #141414;
+  border-radius: 100px;
+}
