@@ -37,3 +37,5 @@ export function getWindowSize(debug?: boolean): sizes {
 
     return windowSize;
 }
+
+

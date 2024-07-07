@@ -15,18 +15,18 @@ export function NavBar() {
     "/contatos": "Contato",
   };
 
-  const navIcon : image = {
+  const navIcon: image = {
     source: "/icons/NavbarIcon.svg",
     alternativeText: undefined!,
     width: 100,
     height: 60,
-  }
-  const buttonIcon : image ={
+  };
+  const buttonIcon: image = {
     source: "/icons/menuIcon.svg",
     alternativeText: undefined!,
     width: 25,
     height: 25,
-  }
+  };
 
   const [pressed, setPressed] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
@@ -34,12 +34,13 @@ export function NavBar() {
   const handleClick = () => {
     setPressed(!pressed);
     setIsDisabled(true);
-    
+
     setTimeout(() => {
       setIsDisabled(false);
-    }, 2000); }
+    }, 2000);
+  };
 
-      return (
+  return (
     <header className="fixed w-screen z-50">
       <div className="fixed">
         <AnimatePresence mode="wait">
@@ -90,18 +91,20 @@ export function NavBar() {
         </AnimatePresence>
       </div>
       <nav className="max-w-[1440px] flex flex-row justify-between p-12 m-auto">
-        <Link href={'/'}><motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0, 0.9, 0.2, 0.99], delay: 0 }}
-        >
-          <Image
-            alt={navIcon.alternativeText}
-            src={navIcon.source}
-            width={navIcon.width}
-            height={navIcon.height}
-          />
-        </motion.div></Link>
+        <Link href={"/"}>
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0, 0.9, 0.2, 0.99], delay: 0 }}
+          >
+            <Image
+              alt={navIcon.alternativeText}
+              src={navIcon.source}
+              width={navIcon.width}
+              height={navIcon.height}
+            />
+          </motion.div>
+        </Link>
         <div className="hidden gap-12 text-xl md:flex">
           {Object.entries(links).map(([url, text], index) => (
             <motion.div
@@ -122,26 +125,26 @@ export function NavBar() {
           ))}
         </div>
         <motion.button
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 0.8,
-          ease: [0, 0.9, 0.2, 0.99],
-          delay: 0.3}}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            ease: [0, 0.9, 0.2, 0.99],
+            delay: 0.3,
+          }}
           key={"buttonMenu"}
           className={"relative z-50 flex md:hidden"}
-          disabled={isDisabled}    
+          disabled={isDisabled}
           onClick={handleClick}
         >
           <Image
-          src={buttonIcon.source}
-          alt={buttonIcon.alternativeText}
-          width={buttonIcon.width}
-          height={buttonIcon.height}
+            src={buttonIcon.source}
+            alt={buttonIcon.alternativeText}
+            width={buttonIcon.width}
+            height={buttonIcon.height}
           />
         </motion.button>
       </nav>
     </header>
   );
-
 }

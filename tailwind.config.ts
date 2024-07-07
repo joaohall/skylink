@@ -24,6 +24,9 @@ const config: Config = {
         "pos-0": "0% 0%",
         "pos-100": "100% 100%",
       },
+      fontFamily: {
+        bitmap: ['var(--font-minecraftiaRegular)'],
+      },
     },
   },
   plugins: [],
