@@ -42,7 +42,7 @@ export default function Home() {
         <Link href={"/servicos"}></Link>
         <div className="absolute -z-40 w-screen h-screen bg-gradient-to-t from-black via-transparent  to-transparent" />
         <div className="absolute -z-50 h-[150vh] w-screen flex ">
-          <div className="w-full h-full absolute top-[45rem] ">
+          <div className="w-full h-[100rem] absolute top-[45rem] ">
             <Earth />
           </div>
         </div>

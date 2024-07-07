@@ -27,8 +27,8 @@ export default function earth() {
     <Canvas>
       <ambientLight intensity={0.1} />
       <directionalLight intensity={5} position={[1, 0.1, 0]} />
-      <motion.mesh scale={3} rotation-y={scrollYProgress}>
-        <sphereGeometry args={[1, 64, 64]} />
+      <motion.mesh scale={0.5} rotation-y={scrollYProgress}>
+        <sphereGeometry args={[6, 32, 16]} />
         <meshStandardMaterial map={color} normalMap={normal} aoMap={aoMap} />
       </motion.mesh>
     </Canvas>
